@@ -12,7 +12,7 @@ namespace atm{
             
            var pinNames = new Dictionary<string, string>();
            pinNames.Add("1111","John Doe");
-           pinNames.Add("2222","Evana Brr");
+           pinNames.Add("2222","Litty Brr");
            pinNames.Add("9999","/Shale");
 
 
@@ -43,11 +43,28 @@ namespace atm{
 
            Console.WriteLine("\n");
 
-           Console.Write("Enter Pin: ");
-           pin = Console.ReadLine();
 
-           Console.WriteLine($"\nWelcome {pinNames[pin]}!");
-           Console.WriteLine("\n");
+           if(option =="4"){
+               Console.Write("Enter Name: ");
+               string name = Console.ReadLine();
+               Console.Write("Enter Pin: ");
+               string newpin = Console.ReadLine();
+               Console.Write("Enter Deposit Amount $: ");
+               string money = Console.ReadLine();
+               pinNames.Add(newpin,name);
+
+
+           }
+
+           if (option !="4"){
+            Console.Write("Enter Pin: ");
+            pin = Console.ReadLine();
+
+            Console.WriteLine($"\nWelcome {pinNames[pin]}!");
+            Console.WriteLine("\n");
+           }
+
+
 
 
 
