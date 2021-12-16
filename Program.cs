@@ -6,10 +6,6 @@ namespace atm{
 
         public static void Main(string[] args ){
 
-            
-
-
-            
            var pinNames = new Dictionary<string, string>();
            pinNames.Add("1111","John Doe");
            pinNames.Add("2222","Litty Brr");
@@ -17,8 +13,9 @@ namespace atm{
 
 
 
-           string option ="";
+           string lity ="";
            string pin ="";
+           int option = 0;
 
            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
     
@@ -34,17 +31,16 @@ namespace atm{
            while(true) {
     
                 Console.Write("Choose Option: ");
-                option = Console.ReadLine();
-                if(option == "1" || option == "2"|| option =="3"|| option =="4"){
+                lity =  Console.ReadLine();
+                option = Int32.Parse(lity);
+                if(option == 1 || option == 1|| option == 3|| option == 4){
                     break;
                 }
-            
             }
-
            Console.WriteLine("\n");
 
 
-           if(option =="4"){
+           if(option ==4){
                Console.Write("Enter Name: ");
                string name = Console.ReadLine();
                Console.Write("Enter Pin: ");
@@ -53,10 +49,9 @@ namespace atm{
                string money = Console.ReadLine();
                pinNames.Add(newpin,name);
 
-
            }
 
-           if (option !="4"){
+           if (option !=4){
             Console.Write("Enter Pin: ");
             pin = Console.ReadLine();
 
